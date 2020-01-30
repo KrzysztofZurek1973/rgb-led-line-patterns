@@ -55,9 +55,9 @@ Initialization is done in
 
 ```
 void initRgbPatterns(int32_t *diodes,
-				uint8_t *rgb_buff,
-				pattParam_t **paramTab,
-				pRefreshFun *funTab){ 
+		uint8_t *rgb_buff,
+		pattParam_t **paramTab,
+		pRefreshFun *funTab){ 
 ```
 
 **Parameters**
