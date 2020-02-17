@@ -55,9 +55,9 @@ Initialization is done in
 
 ```
 void initRgbPatterns(int32_t *diodes,
-		uint8_t *rgb_buff,
-		pattParam_t **paramTab,
-		pRefreshFun *funTab){ 
+			uint8_t *rgb_buff,
+			pattParam_t **paramTab,
+			pRefreshFun *funTab){ 
 ```
 
 **Parameters**
@@ -71,7 +71,9 @@ void initRgbPatterns(int32_t *diodes,
 
 Pattern function is called every specified period of time (set in `pattParam_t param.dt`) by the controller thread. The function calculates new RGB values for each diode based on the parameters defined for the given pattern and saves them in the `rgb_color_buff` buffer.
 
-Changing the RGB values to values that the diode understands and sending these values to the diodes takes place in the controller thread (see [iot_rgb_controller](https://github.com/KrzysztofZurek1973/iot_rgb_controller)).
+Changing the RGB values to values that the diode understands and sending these values to the diodes takes place in the controller thread (see function `refreshRgb` in [thing_ws2812_controller](https://github.com/KrzysztofZurek1973/iot_components/tree/master/thing_ws2812_controller)).
+
+**For sending data to led line SPI interface is used.**
 
 ## Source Code
 
